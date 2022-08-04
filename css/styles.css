@@ -157,7 +157,7 @@ a {
     width: max-content;
     z-index: 1;
     overflow: hidden;
-    transition: color 500ms;
+    transition: color 500ms ease;
 }
 
 .hero .hero-content a::before {
@@ -169,7 +169,7 @@ a {
     top: 0;
     background-color: var(--background-color-white);
     z-index: -1;
-    transition: left 500ms;
+    transition: left 500ms ease;
 }
 
 .hero .hero-content a:hover {
@@ -184,7 +184,7 @@ a {
 .about {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     padding: 5rem 0;
 }
@@ -194,7 +194,7 @@ a {
     min-width: 250px;
     max-width: 50%;
     background-position: center;
-    height: 60vh;
+    height: 100vh;
     background-image: url("../assets/images/about-coffee-craft.jpg");
     background-size: cover;
 }
@@ -202,17 +202,27 @@ a {
 .about .about-content {
     width: 50%;
     font-family: var(--font-Cinzel);
-    margin-top: 100px;
+    display: grid;
+    gap: 40px;
 }
 
 .about .about-content h2 {
-    margin: 0 0 40px 0;
     background-color: var(--background-color-white);
     font-size: var(--font-size-max);
-    flex-wrap: wrap;
 }
 
 .about .about-content p {
     font-family: var(--font-alata);
     font-size: var(--font-size-min);
+}
+
+.about .about-content .know-more-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--background-color-brown);
+    transition: background-color 200ms, color 200ms ease;
+}
+
+.about .about-content .know-more-btn:hover {
+    background-color: var(--background-color-brown);
+    color: var(--text-color-white);
 }
