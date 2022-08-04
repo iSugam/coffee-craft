@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cinzel+Decorative:wght@400;700&family=Josefin+Slab:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--background-color-brown);
+    color: var(--text-color-white);
+}
+
+:root {
+    --text-color-white: hsl(0, 0%, 100%);
+    --text-color-black: hsl(0, 0%, 0%);
+    --text-color-brown: hsl(33, 53%, 17%);
+
+    --font-alata: 'Alata', sans-serif;
+    --font-Josefin-slab: 'Josefin Slab', serif;;
+    --font-Cinzel: 'Cinzel Decorative', cursive;
+
+    --background-color-white: hsl(0, 0%, 100%);
+    --background-color-brown: hsl(22, 88%, 16%);
+
+    --font-size-max: 4rem;
+    --font-size-mid: 2rem;
+    --font-size-min: 1rem;
+    --font-size-extra-small: 15px;
+
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.root {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/************ HEADER Styling ************/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 0 5rem;
+}
+
+#header .hamburger {
+    display: none;
+    visibility: hidden;
+}
+
+#header .nav-close {
+    display: none;
+    visibility: hidden;
+}
+
+#header #navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 6%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color-black);
+    width: max-content;
+}
+
+#header #navbar ul li {
+    display: inline-block;
+    margin: 20px 10px 0;
+}
+
+#header #navbar ul li a,
+#header .social-icon a {
+    padding: 5px 10px;
+    color: var(--text-color-white);
+    text-transform: uppercase;
+    font-size:var(--font-size-extra-small);
+    font-family: var(--font-Cinzel);
+}
+
+#header #navbar .social-icon-mobile {
+    display: none;
+}
+
+
+#header .social-icon{
+    display: flex;
+    gap: 10px;
+}
+#header .social-icon a {
+    font-size: var(--font-size-mid);
+    margin: 20px 0 0;
+}
+
+/************ HERO Styling ************/
+.hero {
+    background-image: url("../assets/images/coffee-craft-hero.png");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-content {
+    width: 90%;
+    margin-top: 15%;
+    font-family: var(--font-Cinzel);
+    color: var(--text-color-white);
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero .hero-content h1 {
+    font-size: var(--font-size-max);
+}
+
+.hero .hero-content p {
+    font-size: var(--font-size-min);
+    width: 45%;
+}
+
+.hero .hero-content a {
+    color: var(--text-color-white);
+    padding: 8px 20px;
+    outline: 1px solid var(--background-color-white);
+    position: relative;
+    width: max-content;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 500ms;
+}
+
+.hero .hero-content a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: var(--background-color-white);
+    z-index: -1;
+    transition: left 500ms;
+}
+
+.hero .hero-content a:hover {
+    color: var(--text-color-brown);
+}
+
+.hero .hero-content a:hover::before {
+    left: 0;
+}
+
+/*********** ABOUT Styling ***********/
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5rem 0;
+}
+
+.about .about-image {
+    width: 50%;
+    min-width: 250px;
+    max-width: 50%;
+    background-position: center;
+    height: 60vh;
+    background-image: url("../assets/images/about-coffee-craft.jpg");
+    background-size: cover;
+}
+
+.about .about-content {
+    width: 50%;
+    font-family: var(--font-Cinzel);
+    margin-top: 100px;
+}
+
+.about .about-content h2 {
+    margin: 0 0 40px 0;
+    background-color: var(--background-color-white);
+    font-size: var(--font-size-max);
+    flex-wrap: wrap;
+}
+
+.about .about-content p {
+    font-family: var(--font-alata);
+    font-size: var(--font-size-min);
+}
