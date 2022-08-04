@@ -30,6 +30,8 @@ html {
 
     --background-active-brown: hsl(22 88% 16% / 0.5);
 
+    --transparent-black: hsl(0 0% 8% 0.8);
+
     --font-size-max: 4rem;
     --font-size-mid: 2rem;
     --font-size-min: 1rem;
@@ -208,6 +210,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-blend-mode: multiply;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,4 +312,83 @@ a {
 .about .about-content .know-more-btn:hover {
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
+}
+
+/************ PRODUCTS Section styling ************/
+.products {
+    padding: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.products h2 {
+    font-size: var(--font-size-max);
+    font-family: var(--font-Cinzel);
+}
+
+.products .product-container .product-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -4px;
+}
+
+.products .product-container .product-content:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.products .product-container .product-content:first-child {
+    margin-top: 5%;
+}
+
+.products .product-content .product-image {
+    width: 80.25%;
+    min-width: 250px;
+    margin: 0 auto;
+}
+
+.products .product-content .product-image img {
+    width: 100%;
+    min-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+.product-content .product-description {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    padding: 0 50px 0 0;
+}
+
+.products .product-content:nth-child(even) .product-description {
+    padding: 0 0 0 50px;
+}
+
+.product-content .product-description h3 {
+    font-family: var(--font-Cinzel);
+    font-size: var(--font-size-mid);
+}
+
+.product-content .product-description p {
+    font-family: var(--font-alata);
+    font-size: var(--font-size-min);
+    text-align: justify;
+}
+
+.product-content .product-description .view-product {
+    font-family: var(--font-Cinzel);
+    padding: 10px 22px;
+    font-weight: var(--font-weight-600);
+    border: 1px solid var(--background-color-brown);
+    color: var(--text-color-brown);
+    width: max-content;
+    background-color: transparent;
+    cursor: pointer;
 }
