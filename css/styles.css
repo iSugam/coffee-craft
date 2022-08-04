@@ -68,11 +68,7 @@ body {
 }
 #header.active {
     background-color: var(--background-color-darkgrey);
-}
-
-#header .hamburger {
-    display: none;
-    visibility: hidden;
+    box-shadow: 0 20px 20px #0005;
 }
 
 #header .nav-close {
@@ -97,7 +93,7 @@ a {
 
 #header #navbar ul li {
     display: inline-block;
-    margin: 20px 10px 0;
+    margin: 10px 10px 0;
 }
 
 #header #navbar ul li a,
@@ -114,13 +110,94 @@ a {
 }
 
 
-#header .social-icon{
+#header .social-icon {
     display: flex;
     gap: 10px;
 }
 #header .social-icon a {
     font-size: var(--font-size-mid);
-    margin: 20px 0 0;
+    margin: 10px 0 0;
+}
+
+#header .hamburger {
+    display: none;
+    visibility: hidden;
+}
+
+/********** HERO Media query 1100px **********/
+@media (max-width: 1100px) {
+
+    #header #navbar {
+        margin-left: 0;
+    }
+
+    #header #navbar ul {
+        width: fit-content;
+    }
+    #header #navbar ul li {
+        margin: 0;
+    }
+}
+
+/********** HERO Media query 980px **********/
+@media (max-width: 980px) {
+
+    #header .hamburger {
+        display: block;
+        visibility: visible;
+        font-size: var(--font-size-mid);
+        color: var(--text-color-white);
+        margin-top: 20px;
+    }
+
+    #header #navbar {
+        position: fixed;
+        top: -150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--background-color-darkgrey);
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        gap: 50px;
+        transition: top 300ms ease-in-out;
+    }
+    #header #navbar.nav-active {
+        top: 50%;
+    }
+
+    #header #navbar ul li {
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    #header .nav-close {
+        display: block;
+        visibility: visible;
+        font-size: var(--font-size-mid);
+        color: var(--text-color-white);
+        position: absolute;
+        top: 40px;
+        right: 84px;
+    }
+
+    #header #navbar .social-icon-mobile {
+        display: block;
+        font-size: var(--font-size-mid);
+        margin-top: 20px;
+    }
+
+    #header #navbar .social-icon-mobile a {
+        color: var(--text-color-white);
+        margin: 0 10px;
+    }
+
+    #header .social-icon {
+        display: none;
+    }
 }
 
 /************ HERO Styling ************/
@@ -193,15 +270,15 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 5rem 0;
+    padding: 6rem 5rem;
 }
 
 .about .about-image {
     width: 50%;
     min-width: 250px;
     max-width: 50%;
-    background-position: center;
-    height: 100vh;
+    background-position: 0 60%;
+    height: 90vh;
     background-image: url("../assets/images/about-coffee-craft.jpg");
     background-size: cover;
 }
