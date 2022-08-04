@@ -24,8 +24,11 @@ html {
     --font-Josefin-slab: 'Josefin Slab', serif;;
     --font-Cinzel: 'Cinzel Decorative', cursive;
 
+    --background-color-darkgrey: rgb(40, 40, 40);
     --background-color-white: hsl(0, 0%, 100%);
     --background-color-brown: hsl(22, 88%, 16%);
+
+    --background-active-brown: hsl(22 88% 16% / 0.5);
 
     --font-size-max: 4rem;
     --font-size-mid: 2rem;
@@ -41,7 +44,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
 }
 
 .root {
@@ -55,12 +57,17 @@ body {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
     width: 100%;
     padding: 0 5rem;
+    transition: background-color 200ms;
+}
+#header.active {
+    background-color: var(--background-color-darkgrey);
 }
 
 #header .hamburger {
