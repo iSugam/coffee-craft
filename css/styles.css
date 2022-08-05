@@ -29,7 +29,6 @@ html {
     --background-color-brown: hsl(22, 88%, 16%);
 
     --transparent-brown: hsl(22 88% 16% / 0.2);
-
     --transparent-black: hsla(0, 0%, 0%, 0.3);
 
     --font-size-max: 4rem;
@@ -612,4 +611,72 @@ a {
         margin: auto;
         margin-top: 10%;
     }
+}
+
+/************ CONTACT Styling ************/
+.contact {
+    padding: 5rem;
+}
+
+.contact-heading h2 {
+    font-family: var(--font-Cinzel);
+    font-size: var(--font-size-max);
+}
+
+.contact-container {
+    width: 100%;    
+}
+
+.contact-container {
+    margin-top: 5%;
+}
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 2rem 10rem;
+    box-shadow: 0 20px 20px var(--transparent-brown);
+}
+
+.contact-container form .contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-container form .contact-details input,
+.contact-container form .message-container textarea {
+    width: 100%;
+    padding: .8rem 1rem;
+    font-size: 20px;
+    background-color: var(--transparent-brown);
+    outline: none;
+    border: none;
+    color: var(--text-color-white);
+    font-family: var(--font-Cinzel);
+}
+
+.contact-container form label {
+    font-family: var(--font-Cinzel);
+    font-size: 20px;
+}
+
+.contact-container form .message-container textarea {
+    height: 300px;
+    resize: none;
+}
+
+.contact-container form button {
+    width: max-content;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 1rem 3rem;
+    font-size: 20px;
+    font-family:var(--font-Josefin-slab);
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--background-color-darkgrey);
+    color: var(--text-color-white);
 }
