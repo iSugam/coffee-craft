@@ -304,7 +304,7 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 6rem 5rem;
+    padding: 8rem 5rem;
 }
 
 .about .about-image {
@@ -386,7 +386,7 @@ a {
 
 /************ PRODUCTS Section styling ************/
 .products {
-    padding: 5rem;
+    padding: 6rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -532,7 +532,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 5rem;
+    padding: 6rem 5rem;
 }
 .services .services-heading h2 {
     font-family: var(--font-Cinzel);
@@ -615,7 +615,7 @@ a {
 
 /************ CONTACT Styling ************/
 .contact {
-    padding: 5rem;
+    padding: 6rem 5rem;
 }
 
 .contact-heading h2 {
@@ -679,4 +679,50 @@ a {
     cursor: pointer;
     background-color: var(--background-color-darkgrey);
     color: var(--text-color-white);
+}
+
+/********** CONTACT Media query 980px **********/
+@media (max-width: 980px) {
+    .contact-container form .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container form .contact-details input,
+    .contact-container form .message-container textarea {
+        padding: .5rem 1rem;
+        font-size: var(--font-size-min);
+    }
+
+    .contact-container form .message-container textarea {
+        height: 200px;
+    }
+
+    .contact-container form button {
+        margin-left: 0;
+    }
+}
+
+/********** CONTACT Media query 756px **********/
+@media (max-width: 756px) {
+
+    .contact {
+        padding: 2rem;
+    }
+
+    .contact-heading h2 {
+        font-size: var(--font-size-mid);
+    }
+
+    .contact-container form {
+        padding: 2rem;
+    }
+}
+
+/********** CONTACT Media query 556px **********/
+@media (max-width: 556px) { 
+    .contact-container form {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
 }
