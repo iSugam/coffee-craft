@@ -214,6 +214,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.3);
+    z-index: 1;
 }
 
 .hero .hero-content {
@@ -225,6 +236,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
+    z-index: 9;
 }
 
 .hero .hero-content h1 {
@@ -284,6 +297,17 @@ a {
     height: 90vh;
     background-image: url("../assets/images/about-coffee-craft.jpg");
     background-size: cover;
+    position: relative;
+}
+.about .about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.3);
+    z-index: 1;
 }
 
 .about .about-content {
@@ -309,14 +333,14 @@ a {
     transition: background-color 200ms, color 200ms ease;
 }
 
-.about .about-content .know-more-btn:hover {
+.about .about-content .know-more-btn:hover{
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
 }
 
 /************ PRODUCTS Section styling ************/
 .products {
-    padding: 10rem 5rem;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -346,6 +370,17 @@ a {
     width: 80.25%;
     min-width: 250px;
     margin: 0 auto;
+    position: relative;
+}
+.products .product-content .product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(0 0 0 / 0.3);
+    z-index: 1;
 }
 
 .products .product-content .product-image img {
@@ -391,4 +426,9 @@ a {
     width: max-content;
     background-color: transparent;
     cursor: pointer;
+    transition: 200ms;
+}
+.product-content .product-description .view-product:hover {
+    background-color: var(--background-color-brown);
+    color: var(--text-color-white);
 }
