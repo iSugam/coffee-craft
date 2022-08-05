@@ -11,17 +11,21 @@
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Animation Link -->
+    <link rel="stylesheet" href="assets/animation/aos-master/dist/aos.css">
 </head>
+
 <body>
     <div class="root">
 
         <!-- ========== HEADER Section Start ========== -->
         <header id="header">
-            <div class="logo">
+            <div class="logo" data-aos="fade-down">
                 <img src="assets/images/coffee-craft-logo.svg" alt="coffee craft logo">
             </div>
 
-            <nav id="navbar">
+            <nav id="navbar" data-aos="fade-down">
                 <div class="nav-close">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -40,7 +44,7 @@
                 </div>
             </nav>
 
-            <div class="social-icon">
+            <div class="social-icon" data-aos="fade-down">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
@@ -55,9 +59,9 @@
             <!-- ========== HERO Section Start ========== -->
             <section class="hero" aria-label="hero section with coffee image background" id="hero">
                     <div class="hero-content">
-                        <h1>Welcome to <br> Coffee craft</h1>
-                        <p>Thank you for visiting our coffee online shop. We serve the best product available in the market</p>
-                        <div class="order-btn">
+                        <h1 data-aos="fade-up">Welcome to <br> Coffee craft</h1>
+                        <p data-aos="fade-up" data-aos-delay="250">Thank you for visiting our coffee online shop. We serve the best product available in the market</p>
+                        <div class="order-btn" data-aos="fade-up" data-aos-delay="500">
                             <a href="#">Get your Coffee</a>
                         </div>
                     </div>
@@ -66,10 +70,10 @@
 
             <!-- ========== ABOUT Section Start ========== -->
             <section class="about" id="about">
-                <div class="about-image" aria-label="about coffee image">
+                <div class="about-image" aria-label="about coffee image" data-aos="fade-right">
                 </div>
 
-                <div class="about-content">
+                <div class="about-content" data-aos="fade-left">
                     <h2>About our goal</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Inventore esse amet perferendis ab minima quidem iusto deserunt pariatur odit voluptate quas sequi sint, 
@@ -80,19 +84,19 @@
             </section>
 
             <!-- ========== PRODUCTS Section Start ========== -->
-            <section class="products" id="products">
-                <div class="products-heading">
+            <section class="products" id="products" >
+                <div class="products-heading" data-aos="fade-right">
                     <h2>Get Our Products</h2>
                 </div>
 
                 <!-- Product container -->
                 <div class="product-container"> 
                     <div class="product-content">
-                        <div class="product-image">
+                        <div class="product-image" data-aos="fade-left">
                             <img src="assets/images/product-1.jpg" alt="product one image">
                         </div>
     
-                        <div class="product-description">
+                        <div class="product-description" data-aos="fade-right">
                             <h3>Product One</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -106,11 +110,11 @@
                     </div>
     
                     <div class="product-content">
-                        <div class="product-image">
+                        <div class="product-image" data-aos="fade-right">
                             <img src="assets/images/product-2.jpg" alt="product two image">
                         </div>
     
-                        <div class="product-description">
+                        <div class="product-description" data-aos="fade-left">
                             <h3>Product Two</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -124,11 +128,11 @@
                     </div>
     
                     <div class="product-content">
-                        <div class="product-image">
+                        <div class="product-image" data-aos="fade-left">
                             <img src="assets/images/product-3.jpg" alt="product three image">
                         </div>
     
-                        <div class="product-description">
+                        <div class="product-description" data-aos="fade-right">
                             <h3>Product Three</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -142,11 +146,11 @@
                     </div>
     
                     <div class="product-content">
-                        <div class="product-image">
+                        <div class="product-image" data-aos="fade-right">
                             <img src="assets/images/product-4.jpg" alt="product four image">
                         </div>
     
-                        <div class="product-description">
+                        <div class="product-description" data-aos="fade-left">
                             <h3>Product Four</h3>
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -163,12 +167,12 @@
 
             <!-- ========== SERVICES Section start ========== -->
             <section class="services" id="services">
-                <div class="services-heading">
+                <div class="services-heading" data-aos="fade-right">
                     <h2>Our Services</h2>
                 </div>
 
                 <div class="service-container">
-                    <div class="service-content">
+                    <div class="service-content" data-aos="fade-up">
                         <div class="service-content-image">
                             <img src="assets/images/service-1.jpg" alt="Quality service image">
                         </div>
@@ -177,8 +181,8 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab praesentium laboriosam omnis similique eligendi officiis.</p>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <div class="service-content-image">
+                    <div class="service-content" data-aos="fade-up" data-aos-delay="250">
+                        <div class="service-content-image" >
                             <img src="assets/images/service-2.jpg" alt="Quality service image">
                         </div>
                         <div class="service-content-description">
@@ -186,7 +190,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab praesentium laboriosam omnis similique eligendi officiis.</p>
                         </div>
                     </div>
-                    <div class="service-content">
+                    <div class="service-content" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-content-image">
                             <img src="assets/images/service-3.jpg" alt="Quality service image">
                         </div>
@@ -200,13 +204,13 @@
 
             <!-- ========== CONTACT Section start ========== -->
             <section class="contact" id="contact">
-                <div class="contact-heading">
+                <div class="contact-heading" data-aos="fade-right">
                     <h2>Contact Us</h2>
                 </div>
 
                 <div class="contact-container">
                     <form action="/">
-                        <div class="contact-details">
+                        <div class="contact-details" data-aos="fade-down">
                             <div class="email-container">
                                 <input type="email" name="email" id="email" placeholder="Enter your Email...">
                             </div>
@@ -222,17 +226,17 @@
                             </div>
                         </div>
 
-                        <div class="message-container">
+                        <div class="message-container" data-aos="fade-up">
                             <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
                         </div>
 
-                        <button type="submit">Submit</button>
+                        <button type="submit" data-aos="fade-left">Submit</button>
                     </form>
                 </div>
             </section>
         </main>
     </div>
-
+    <script src="assets/animation/aos-master/dist/aos.js"></script>
     <script src="js/jquery/jQuery.js"></script>
     <script src="js/custom/script.js"></script>
 </body>
