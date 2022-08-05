@@ -292,6 +292,10 @@ a {
     .hero .hero-content h1 {
         font-size: var(--font-size-mid);
     }
+
+    .hero .hero-content p {
+        width: 80%;
+    }
 }
 
 /*********** ABOUT Styling ***********/
@@ -357,7 +361,7 @@ a {
 
     .about {
         flex-direction: column;
-        padding: 3rem 2rem;
+        padding: 3rem 5rem;
         margin-top: 30px;
     }
 
@@ -378,6 +382,20 @@ a {
 
     .about .about-content h2 {
         font-size: var(--font-size-mid);
+    }
+}
+
+/********** ABOUT Media query 556px **********/
+@media (max-width: 556px) {
+
+    .about {
+        padding: 3rem 2rem;
+    }
+
+    .about .about-image {
+        height: 300px;
+        background-position: 0 70%;
+
     }
 }
 
@@ -480,7 +498,7 @@ a {
 @media (max-width: 756px) {
 
     .products {
-        padding: 3rem 2rem;
+        padding: 3rem 5rem;
         gap: 40px;
     }
 
@@ -521,6 +539,13 @@ a {
     .product-content .product-description h3 {
         font-size: 20px;
         font-weight: bolder;
+    }
+}
+
+/********** ABOUT Media query 556px **********/
+@media (max-width: 556px) {
+    .products {
+        padding: 3rem 2rem;
     }
 }
 
@@ -590,7 +615,7 @@ a {
 @media (max-width: 756px) {
 
     .services {
-        padding: 3rem 2rem;
+        padding: 3rem 5rem;
     }
 
     .services .services-heading h2 {
@@ -607,6 +632,14 @@ a {
         width: 100%;
         margin: auto;
         margin-top: 10%;
+    }
+}
+
+/********** SERVICES Media query 556px **********/
+@media (max-width: 556px) {
+
+    .services {
+        padding: 3rem 2rem;
     }
 }
 
@@ -650,8 +683,10 @@ a {
     background-color: var(--transparent-brown);
     outline: none;
     border: none;
-    color: var(--text-color-white);
-    font-family: var(--font-Cinzel);
+    color: var(--text-color-black);
+    font-family: var(--font-Josefin-slab);
+    font-size: 24px;
+    font-weight: var(--font-weight-700);
 }
 
 .contact-container form label {
@@ -703,7 +738,7 @@ a {
 @media (max-width: 756px) {
 
     .contact {
-        padding: 3rem 2rem;
+        padding: 3rem 5rem;
     }
 
     .contact-heading h2 {
@@ -717,6 +752,9 @@ a {
 
 /********** CONTACT Media query 556px **********/
 @media (max-width: 556px) { 
+    .contact {
+        padding: 3rem 2rem;
+    }
     .contact-container form {
         padding: 0;
         background-color: transparent;
