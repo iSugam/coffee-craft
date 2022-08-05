@@ -6,10 +6,6 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 ::selection {
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
@@ -361,7 +357,8 @@ a {
 
     .about {
         flex-direction: column;
-        padding: 6rem 2rem;
+        padding: 3rem 2rem;
+        margin-top: 30px;
     }
 
     .about .about-image {
@@ -483,7 +480,7 @@ a {
 @media (max-width: 756px) {
 
     .products {
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
         gap: 40px;
     }
 
@@ -593,7 +590,7 @@ a {
 @media (max-width: 756px) {
 
     .services {
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 
     .services .services-heading h2 {
@@ -706,7 +703,7 @@ a {
 @media (max-width: 756px) {
 
     .contact {
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 
     .contact-heading h2 {
