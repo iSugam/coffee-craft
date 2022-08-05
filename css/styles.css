@@ -28,7 +28,7 @@ html {
     --background-color-white: hsl(0, 0%, 100%);
     --background-color-brown: hsl(22, 88%, 16%);
 
-    --background-active-brown: hsl(22 88% 16% / 0.5);
+    --transparent-brown: hsl(22 88% 16% / 0.2);
 
     --transparent-black: hsla(0, 0%, 0%, 0.3);
 
@@ -526,4 +526,54 @@ a {
         font-size: 20px;
         font-weight: bolder;
     }
+}
+
+/************ SERVICES Styling ************/
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 5rem;
+}
+.services .services-heading h2 {
+    font-family: var(--font-Cinzel);
+    font-size: var(--font-size-max);
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.service-container .service-content {
+    width: 30%;
+    box-shadow: 0 20px 20px var(--transparent-brown);
+    text-align: center;
+}
+
+.service-container .service-content .service-content-image {
+    width: 100%;
+}
+
+.service-container .service-content .service-content-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-container .service-content .service-content-description {
+    padding: 1.5rem 1.5rem 3rem;
+}
+
+.service-container .service-content .service-content-description h3 {
+    font-family: var(--font-Cinzel);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-container .service-content .service-content-description p {
+    font-family: var(--font-alata);
+    font-size: var(--font-size-extra-small);
 }
