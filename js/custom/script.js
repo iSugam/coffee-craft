@@ -18,8 +18,26 @@ $(document).ready(function() {
         $("#navbar").removeClass("nav-active")
     });
 
-    $(".nav-menu li").click(function() {
+    $(".nav-menu li a").click(function() {
         console.log("clicked");
         $("#navbar").removeClass("nav-active")
     });
+
+    // Scroll to SECTIONS 
+    $(".scrollTo").click(function() {
+        let getSection = $(this).attr("href");
+        if(($(getSection)).length) {
+            let target = 60; // For seeting top margin
+
+            if(window.innerWidth < 756) {
+                target = 80
+            }
+
+            let getOffSet = $(getSection).offset().top - target; // Get top offset
+            $("html,body").animate({
+                scrollTop: getOffSet
+            }, 1000)
+        }
+        return false
+    })
 })
