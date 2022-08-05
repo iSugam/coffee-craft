@@ -357,6 +357,34 @@ a {
     color: var(--text-color-white);
 }
 
+/********** ABOUT Media query 756px **********/
+@media (max-width: 756px) {
+
+    .about {
+        flex-direction: column;
+        padding: 6rem 2rem;
+    }
+
+    .about .about-image {
+        width: 100%;
+        min-width: 250px;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+        background-position: 0 60%;
+        background-image: url("../assets/images/about-coffee-craft.jpg");
+        background-size: cover;
+        position: relative;
+    }
+
+    .about .about-content {
+        width: 100%;
+    }
+
+    .about .about-content h2 {
+        font-size: var(--font-size-mid);
+    }
+}
+
 /************ PRODUCTS Section styling ************/
 .products {
     padding: 5rem;
@@ -450,4 +478,52 @@ a {
 .product-content .product-description .view-product:hover {
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
+}
+
+/********** ABOUT Media query 756px **********/
+@media (max-width: 756px) {
+
+    .products {
+        padding: 5rem 2rem;
+        gap: 40px;
+    }
+
+    .products h2 {
+        font-size: var(--font-size-mid);
+    }
+
+    .products .product-container .product-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .products .product-container .product-content:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    .products .product-content .product-image {
+        width: 100%;
+        min-width: 250px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .product-content .product-description {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .product-content .product-description {
+        padding: 0;
+    }
+
+    .products .product-content:nth-child(even) .product-description {
+        padding: 0;
+    }
+
+    .product-content .product-description h3 {
+        font-size: 20px;
+        font-weight: bolder;
+    }
 }
