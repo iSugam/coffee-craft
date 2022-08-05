@@ -543,7 +543,6 @@ a {
 .service-container {
     display: flex;
     justify-content: space-between;
-    gap: 10%;
 }
 
 .service-container .service-content {
@@ -576,4 +575,41 @@ a {
 .service-container .service-content .service-content-description p {
     font-family: var(--font-alata);
     font-size: var(--font-size-extra-small);
+}
+
+/********** SERVICES Media query 980px **********/
+@media (max-width: 980px) {
+
+    .service-container {
+        flex-wrap: wrap;
+    }
+    .service-container .service-content {
+        width: 45%;
+        margin: auto;
+        margin-top: 5%;
+    }
+}
+
+/********** SERVICES Media query 756px **********/
+@media (max-width: 756px) {
+
+    .services {
+        padding: 2rem;
+    }
+
+    .services .services-heading h2 {
+        font-size: var(--font-size-mid);
+    }
+
+    .service-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .service-container .service-content {
+        width: 100%;
+        margin: auto;
+        margin-top: 10%;
+    }
 }
