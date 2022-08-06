@@ -938,4 +938,13 @@ a {
     .footer-left ul li {
         text-align: center;
     }
+
+    .footer-right .news-letter input,
+    .footer-right .news-letter button {
+        border-radius: 0;
+    }
+
+    .footer-right .news-letter button {
+        border-top-left-radius: 40px;
+    }
 }
