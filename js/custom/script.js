@@ -38,19 +38,15 @@ $(document).ready(function() {
 
     // Navbar OPEN and CLOSE on click
     $(".hamburger").click(function() {
-        console.log("clicked");
         $("#navbar").addClass("nav-active");
     });
 
     $(".nav-close").click(function() {
-        console.log("clicked");
         $("#navbar").removeClass("nav-active");
     });
 
     $(".nav-menu li a").click(function() {
-        console.log("clicked");
         $("#navbar").removeClass("nav-active");
     });
 
-})
-
+});
