@@ -22,6 +22,7 @@
 
     --background-color-darkgrey: rgb(40, 40, 40);
     --background-color-white: hsl(0, 0%, 100%);
+    --background-color-orange: hsl(30, 100%, 50%);
     --background-color-brown: hsl(22, 88%, 16%);
     --background-color-darkbrown: hsl(23, 81%, 6%);
 
@@ -101,6 +102,12 @@ a {
     text-transform: uppercase;
     font-size:var(--font-size-extra-small);
     font-family: var(--font-Cinzel);
+    transition: color 300ms;
+}
+
+#header #navbar ul li a:hover,
+#header .social-icon a:hover {
+    color: var(--background-color-orange);
 }
 
 #header #navbar .social-icon-mobile {
