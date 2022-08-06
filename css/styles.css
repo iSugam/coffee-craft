@@ -297,6 +297,11 @@ a {
 
 /********** HERO Media query 756px **********/
 @media (max-width: 756px) {
+
+    .hero {
+        background-attachment: fixed;
+    }
+
     .hero .hero-content h1 {
         font-size: var(--font-size-mid);
     }
