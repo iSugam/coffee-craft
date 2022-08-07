@@ -220,6 +220,7 @@ a {
 /************ HERO Styling ************/
 .hero {
     background-image: url("../assets/images/coffee-craft-hero.png");
+    background-color: var(--transparent-black);
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
