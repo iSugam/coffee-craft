@@ -1,6 +1,11 @@
 # Coffee Creft Web-Template Design and Development
 This is a coffee shop web template design and developed my me.
 
+## Clone this project with terminal
+```bash
+git clone https://github.com/iSugam/coffee-craft.git
+```
+
 ## Screenshot of the website
 ![](./assets/screenshot/website-screenshot.png)
 
