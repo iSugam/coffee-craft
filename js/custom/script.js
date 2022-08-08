@@ -10,25 +10,26 @@ $(document).ready(function() {
     // Animation on Scroll
     (function(){ 
         AOS.init({
-            offset: 100, // offset (in px) from the original trigger point
-            duration: 900, // values from 0 to 3000, with step 50ms
-            easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
-            mirror: false, // whether elements should animate out while scrolling past them
+            offset: 100,
+            duration: 900,
+            easing: 'ease',
+            once: false,
+            mirror: false,
         })
     }());
 
     // Scroll to SECTIONS 
     $(".scrollTo").click(function() {
         let getSection = $(this).attr("href");
-        if(($(getSection)).length) {
-            let target = 60; // For seeting top margin
+        if($(getSection).length) {
+            // For seeting top margin
+            let target = 60; 
 
             if(window.innerWidth < 756) {
                 target = 80;
             }
-
-            let getOffSet = $(getSection).offset().top - target; // Get top offset
+            // Get top offset
+            let getOffSet = $(getSection).offset().top - target; 
             $("html,body").animate({
                 scrollTop: getOffSet
             }, 1000);
