@@ -1,7 +1,8 @@
 $(document).ready(function() {
+"use strict"
 
     // HEADER Background on scroll
-    window.addEventListener("scroll", function() {
+    $(window).scroll(function() {
         if(this.scrollY > 100) {
             $("#header").addClass("active");
         } else $("#header").removeClass("active");
