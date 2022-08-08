@@ -20,7 +20,11 @@ $(document).ready(function() {
     }());
 
     // Scroll to SECTIONS 
-    $(".scrollTo").click(function() {
+    $(".scrollTo").click(function(e) {
+        // Add active class
+        $(".scrollTo").removeClass("active");
+        $(this).addClass("active");
+
         let getSection = $(this).attr("href");
         if($(getSection).length) {
             // For seeting top margin
