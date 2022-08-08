@@ -105,6 +105,10 @@ a {
     transition: color 300ms;
 }
 
+#header #navbar ul li .scrollTo.active {
+    color: var(--background-color-orange);
+}
+
 #header #navbar ul li a:hover,
 #header .social-icon a:hover {
     color: var(--background-color-orange);
