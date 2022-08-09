@@ -17,3 +17,5 @@ git clone https://github.com/iSugam/coffee-craft.git
 ##### Screenshot was edited on BeFunky.
 Link 👇 to befunky
 - BeFunky URL: [BeFunky Link](https://www.befunky.com/)
+
+Please ⭐ this repository if you like it.
