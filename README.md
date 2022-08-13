@@ -1,4 +1,4 @@
-# Coffee Creft Web-Template Design and Development
+# Coffee Craft Web-Template Design and Development
 This is a coffee shop web template design and developed my me.
 
 ## Clone this project with terminal
