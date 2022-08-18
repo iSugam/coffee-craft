@@ -17,7 +17,7 @@ $(document).ready(function() {
             once: false,
             mirror: false,
         })
-    }());
+    })();
 
     // Scroll to SECTIONS 
     $(".scrollTo").click(function(e) {
