@@ -55,4 +55,18 @@ $(document).ready(function() {
         $("#navbar").removeClass("nav-active");
     });
 
+    $(".close-product").click(function() {
+        $(".product-viewer").removeClass("active")
+    })
+
+});
+
+document.querySelectorAll(".view-product").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        $(".product-viewer").addClass("active")
+        $(".product-viewer > img").attr({
+            src: `./assets/images/product-${index + 1}.jpg`,
+            alt: `product-${index + 1}.jpg`
+        })
+    })
 });
