@@ -524,6 +524,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 30px;
     visibility: hidden;
     opacity: 0;
     transition: 300ms;
