@@ -63,10 +63,8 @@ $(document).ready(function() {
 
 document.querySelectorAll(".view-product").forEach((btn, index) => {
     btn.addEventListener("click", () => {
-        $(".product-viewer").addClass("active")
-        $(".product-viewer > img").attr({
-            src: `./assets/images/product-${index + 1}.jpg`,
-            alt: `product-${index + 1}.jpg`
-        })
-    })
+        const productImage = $(".product-content .product-image img")[index].getAttribute("src");
+        $(".product-viewer img").attr("src", productImage);
+        $(".product-viewer").addClass("active");
+    });
 });
