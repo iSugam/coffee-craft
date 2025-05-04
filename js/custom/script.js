@@ -18,6 +18,51 @@ $(document).ready(function() {
             mirror: false,
         })
     })();
+    
+        // Cache selectors
+    const scrollToLinks = $(".scrollTo");
+    const sections = scrollToLinks.map(function() {
+        return $($(this).attr("href"));
+    }).get();
+    
+    // Scrollspy function
+    function updateActiveNav() {
+        // Get current scroll position
+        const scrollPosition = $(window).scrollTop() + 1; // Add 1px buffer
+        
+        // Determine the target offset based on screen size
+        const targetOffset = window.innerWidth < 756 ? 80 : 60;
+        
+        let currentSection = null;
+        
+        // Check each section
+        sections.forEach(function(section) {
+            const sectionTop = section.offset().top - targetOffset;
+            const sectionBottom = sectionTop + section.outerHeight();
+            
+            // If section is in view
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                currentSection = section;
+            }
+        });
+        
+        // Update active class only if it found a current section
+        if (currentSection) {
+            const id = "#" + currentSection.attr("id");
+            scrollToLinks.removeClass("active");
+            scrollToLinks.filter('[href="' + id + '"]').addClass("active");
+        }
+    }
+    
+    // Throttle scroll events for better performance
+    let scrollTimeout;
+    $(window).scroll(function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveNav, 100);
+    });
+    
+    // Run on page load
+    updateActiveNav();
 
     // Scroll to SECTIONS 
     $(".scrollTo").click(function(e) {
