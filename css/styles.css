@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Cinzel+Decorative:wght@400;700&family=Josefin+Slab:wght@400;500;600;700&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,7 +19,7 @@
     --text-color-brown: hsl(33, 53%, 17%);
 
     --font-alata: 'Alata', sans-serif;
-    --font-Josefin-slab: 'Josefin Slab', serif;;
+    --font-Josefin-slab: 'Josefin Slab', serif;
     --font-Cinzel: 'Cinzel Decorative', cursive;
 
     --background-color-darkgrey: rgb(40, 40, 40);
@@ -65,9 +67,15 @@ body {
     padding: 0 5rem;
     transition: background-color 200ms;
 }
+
 #header.active {
     background-color: var(--background-color-darkgrey);
     box-shadow: 0 20px 20px #0005;
+}
+
+#header .logo a {
+    color: var(--text-color-white);
+    font-size: 1.75rem;
 }
 
 #header .nav-close {
@@ -100,7 +108,7 @@ a {
     padding: 5px 10px;
     color: var(--text-color-white);
     text-transform: uppercase;
-    font-size:var(--font-size-extra-small);
+    font-size: var(--font-size-extra-small);
     font-family: var(--font-Cinzel);
     transition: color 300ms;
 }
@@ -123,6 +131,7 @@ a {
     display: flex;
     gap: 10px;
 }
+
 #header .social-icon a {
     font-size: var(--font-size-mid);
     margin: 10px 0 0;
@@ -143,6 +152,7 @@ a {
     #header #navbar ul {
         width: fit-content;
     }
+
     #header #navbar ul li {
         margin: 0;
     }
@@ -156,7 +166,7 @@ a {
         visibility: visible;
         font-size: var(--font-size-mid);
         color: var(--text-color-white);
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
     #header #navbar {
@@ -172,6 +182,7 @@ a {
         gap: 50px;
         transition: top 300ms ease-in-out;
     }
+
     #header #navbar.nav-active {
         top: 50%;
     }
@@ -236,6 +247,7 @@ a {
     align-items: center;
     position: relative;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -335,6 +347,7 @@ a {
     background-size: cover;
     position: relative;
 }
+
 .about .about-image::before {
     content: '';
     position: absolute;
@@ -369,7 +382,7 @@ a {
     transition: background-color 200ms, color 200ms ease;
 }
 
-.about .about-content .know-more-btn:hover{
+.about .about-content .know-more-btn:hover {
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
 }
@@ -451,6 +464,7 @@ a {
     margin: 0 auto;
     position: relative;
 }
+
 .products .product-content .product-image::before {
     content: '';
     position: absolute;
@@ -507,6 +521,7 @@ a {
     cursor: pointer;
     transition: 200ms;
 }
+
 .product-content .product-description .view-product:hover {
     background-color: var(--background-color-brown);
     color: var(--text-color-white);
@@ -530,6 +545,7 @@ a {
     transition: 300ms;
     transform: scale(0);
 }
+
 .product-viewer.active {
     visibility: visible;
     opacity: 1;
@@ -567,7 +583,7 @@ a {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .products .product-container .product-content:nth-child(odd) {
         flex-direction: column;
     }
@@ -613,6 +629,7 @@ a {
     gap: 50px;
     padding: 6rem 5rem;
 }
+
 .services .services-heading h2 {
     font-family: var(--font-Cinzel);
     font-size: var(--font-size-max);
@@ -642,7 +659,7 @@ a {
     transition: transform 800ms;
 }
 
-.service-container .service-content .service-content-image:hover > img {
+.service-container .service-content .service-content-image:hover>img {
     transform: scale(1.1);
 }
 
@@ -667,6 +684,7 @@ a {
     .service-container {
         flex-wrap: wrap;
     }
+
     .service-container .service-content {
         width: 45%;
         margin: auto;
@@ -717,12 +735,13 @@ a {
 }
 
 .contact-container {
-    width: 100%;    
+    width: 100%;
 }
 
 .contact-container {
     margin-top: 5%;
 }
+
 .contact-container form {
     display: flex;
     flex-direction: column;
@@ -768,7 +787,7 @@ a {
     margin-right: 0;
     padding: .8rem 3rem;
     font-size: 20px;
-    font-family:var(--font-Josefin-slab);
+    font-family: var(--font-Josefin-slab);
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
@@ -777,6 +796,7 @@ a {
     color: var(--text-color-white);
     transition: 200ms;
 }
+
 .contact-container form button:hover {
     background-color: var(--background-color-brown);
 }
@@ -819,10 +839,11 @@ a {
 }
 
 /********** CONTACT Media query 556px **********/
-@media (max-width: 556px) { 
+@media (max-width: 556px) {
     .contact {
         padding: 3rem 2rem;
     }
+
     .contact-container form {
         padding: 0;
         background-color: transparent;
@@ -835,10 +856,12 @@ a {
     width: 100%;
     height: fit-content;
     position: relative;
-    font-family:var(--font-Cinzel);
+    font-family: var(--font-Cinzel);
     overflow: hidden;
 }
-.footer, .footer-left {
+
+.footer,
+.footer-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -862,16 +885,19 @@ a {
 .footer-left ul {
     margin-top: 30px;
 }
+
 .footer-left ul li {
     display: block;
     margin: 20px auto;
 }
+
 .footer-left ul li a {
     font-size: 20px;
     color: var(--text-color-white);
     opacity: .7;
     transition: opacity 200ms;
 }
+
 .footer-left ul li a:hover {
     opacity: 1;
 }
@@ -932,6 +958,7 @@ a {
     z-index: 1;
     transition: color 300ms;
 }
+
 .footer-right .social-media a:hover {
     color: var(--background-color-brown);
 }
@@ -949,6 +976,7 @@ a {
     z-index: -1;
     transition: transform 300ms;
 }
+
 .footer-right .social-media a:hover::after {
     transform: translate(-50%, -50%) scale(1);
 }
@@ -964,7 +992,7 @@ a {
     justify-content: center;
     align-items: center;
     color: var(--text-color-white);
-    font-family:var(--font-Cinzel);
+    font-family: var(--font-Cinzel);
 }
 
 /********** FOOTER Media query 980px **********/
@@ -978,12 +1006,14 @@ a {
 /********** FOOTER Media query 756px **********/
 @media (max-width: 756px) {
 
-    .footer-left, .footer-right {
+    .footer-left,
+    .footer-right {
         justify-content: center;
         align-items: center;
         gap: 40px;
     }
-    .footer-left h4, 
+
+    .footer-left h4,
     .footer-left ul li {
         text-align: center;
     }
