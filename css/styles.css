@@ -400,8 +400,9 @@ a {
         width: 100%;
         min-width: 250px;
         max-width: 100%;
+        max-height: 500px;
         aspect-ratio: 1 / 1;
-        background-position: 0 60%;
+        background-position: center;
         background-image: url("../assets/images/about-coffee-craft.jpg");
         background-size: cover;
         position: relative;
